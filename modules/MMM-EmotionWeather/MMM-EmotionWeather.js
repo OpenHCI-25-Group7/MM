@@ -1,68 +1,84 @@
 Module.register("MMM-EmotionWeather", {
   defaults: {
-    // 初始預設值，如果後續成功取得新內容，config 就會被更新
-    emotionData: {
-      emotion: "未知",
-      weather: "未知",
-      comment: "等待更新..."
-    }
+    suggestion: "載入中...",
+    fortune: "載入中...",
+    weather: null
   },
-    // 模組啟動時呼叫 (不要忘記不要直接用 arrow function，因為要保留 this)
+
   start() {
     console.log("✅ MMM-EmotionWeather 模組已載入！");
-    // 初始呼叫一次
     this.updateContent();
-    // 每分鐘呼叫一次 (60000 毫秒)
     setInterval(() => {
       this.updateContent();
     }, 60000);
   },
-    // 定義發送 HTTP POST 並處理回傳資料的函數
+
   updateContent() {
-    fetch('http://localhost:5000/display_content', {
-      method: 'POST',
+    fetch("http://localhost:5000/display_content", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
-      // 如果你需要送出特定的資料，可在這裡調整
       body: JSON.stringify({ query: "getDisplayContent" })
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.result) {
-        const result = data.result;
-
-        this.config.emotionData = {
-          emotion: result.emotion || "未知",
-          weather: result.weather || "未知",
-          comment: result.fortune + " " + result.headline
-        };
-
-        this.updateDom();
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching display content:", error);
-    });
+      .then(res => res.json())
+      .then(data => {
+        if (data.result) {
+          this.config.suggestion = data.result.suggestion || "未提供建議";
+          this.config.fortune = data.result.fortune || "未提供運勢";
+          this.config.weather = data.result.weather || null;
+          this.updateDom();
+        }
+      })
+      .catch(err => {
+        console.error("❌ 錯誤：", err);
+      });
   },
-    getDom() {
-    const wrapper = document.createElement("div");
-    const e = this.config.emotionData;
 
-    if (e.weather === "未知" && e.emotion === "未知") {
-      wrapper.innerHTML = `<div style="font-size: 24px; color: gray;">載入中...</div>`;
-    } else {
-      wrapper.innerHTML = `
-        <div style="font-size: 48px; color: white;">家庭情緒天氣：${e.weather}（${e.emotion}）</div>
-        <div style="font-size: 24px; color: gray;">${e.comment}</div>
-      `;
-    }
+  getDom() {
+  const wrapper = document.createElement("div");
+  wrapper.className = "emotion-container";
 
-    return wrapper;
-  }   
+  // 每日建議
+  const suggestion = document.createElement("div");
+  suggestion.innerHTML = `
+    <div class="section-title">每日建議</div>
+    <div class="section-text">${this.config.suggestion}</div>
+  `;
+  wrapper.appendChild(suggestion);
+
+  // 每日運勢
+  const fortune = document.createElement("div");
+  fortune.innerHTML = `
+    <div class="section-title">每日運勢</div>
+    <div class="section-text">家庭運勢：${this.config.fortune}</div>
+  `;
+  wrapper.appendChild(fortune);
+
+  // 天氣區塊
+  if (this.config.weather) {
+    const w = this.config.weather;
+
+    const weather = document.createElement("div");
+    weather.className = "weather-section";
+    weather.innerHTML = `
+      <div class="weather-title">📍 ${w.city}｜${w.date}</div>
+      <div class="weather-items">
+        <div>🌅 日出：${w.sunrise}</div>
+        <div>🌇 日落：${w.sunset}</div>
+        <div>🌡️ 溫度：${w.temperature}（體感 ${w.feels_like}）</div>
+        <div>💧 濕度：${w.humidity}</div>
+        <div>💨 風速：${w.wind}</div>
+        <div>🎈 氣壓：${w.pressure}</div>
+        <div>☀️ 紫外線：${w.uv}</div>
+      </div>
+    `;
+    wrapper.appendChild(weather);
+  }
+
+  return wrapper;
+  },
+  getStyles() {
+  return ["MMM-EmotionWeather.css"];
+  } 
 });

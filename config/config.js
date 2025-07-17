@@ -45,11 +45,11 @@ let config = {
 			module: "updatenotification",
 			position: "top_bar"
 		},
-		{
+		/*{
 			module: "clock",
 			position: "top_left"
-		},
-		{
+		},*/
+		/*{
 			module: "calendar",
 			position: "top_left",
 			config: {
@@ -62,12 +62,12 @@ let config = {
 				}
 				]
 			}
-		}
-		{
+		},*/
+		/*{
 			module: "compliments",
 			position: "lower_third"
-		},
-		{
+		},*/
+		/*{
 		module: "weather",
 		position: "top_right",
 		module: "weather",
@@ -78,8 +78,8 @@ let config = {
 			lat: 25.0478,
 			lon: 121.5319
 			}
-		},
-		{
+		},*/
+		/*{
 		module: "weather",
 		position: "top_right",
 		header: "Weather Forecast",
@@ -91,8 +91,8 @@ let config = {
 			lat: 25.0478,
 			lon: 121.5319
 			}
-		},
-		{
+		},*/
+		/*{
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
@@ -107,7 +107,11 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		},
+		},*/
+		{
+		module: "MMM-EmotionWeather",
+		position: "top_left" // ← 你可以改成想顯示的位置
+		}
 	]
 };
 
