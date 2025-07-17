@@ -51,7 +51,7 @@ let config = {
 		},
 		{
 			module: "calendar",
-			header: "TW Holidays",
+			header: "google 日曆",
 			position: "top_left",
 			config: {
 				calendars: [
