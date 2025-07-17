@@ -60,6 +60,7 @@ Temporary Items
 !/modules/default
 !/modules/default/**
 !/modules/README.md**
+!/modules/MMM-EmotionWeather/**
 
 # Ignore changes to the custom css files but keep the sample and main.
 /css/*
@@ -70,6 +71,7 @@ Temporary Items
 
 # Ignore users config file but keep the sample.
 /config/*
+!/config/config.js
 !/config/config.js.sample
 
 # Vim

@@ -1,0 +1,6 @@
+{
+  "name": "MMM-EmotionWeather",
+  "version": "1.0.0",
+  "description": "Displays family emotion as weather.",
+  "main": "MMM-EmotionWeather.js"
+}
