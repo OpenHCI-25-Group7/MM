@@ -51,18 +51,18 @@ let config = {
 		},
 		{
 			module: "calendar",
-			header: "google 日曆",
 			position: "top_left",
 			config: {
+				maximumEntries: 6, // 顯示幾筆
+				maximumNumberOfDays: 90, // 顯示多遠的未來
 				calendars: [
-					{
-						fetchInterval: 7 * 24 * 60 * 60 * 1000,
-						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/zh-tw.taiwan%23holiday%40group.v.calendar.google.com/public/basic.ics"
-					}
+				{
+					symbol: "🔔",
+					url: "https://calendar.google.com/calendar/ical/abc1234567890%40group.calendar.google.com/public/basic.ics"
+				}
 				]
 			}
-		},
+		}
 		{
 			module: "compliments",
 			position: "lower_third"
