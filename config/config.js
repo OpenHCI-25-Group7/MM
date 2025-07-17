@@ -115,6 +115,10 @@ let config = {
 		{
 		module: "MMM-HorizontalLine",
 		position: "bottom_center" // ✅ 就會顯示在畫面底部中央
+		},
+		{
+		module: "MMM-LocationDate",
+		position: "bottom_left" // 位置其實沒用，因為你用 absolute 定位了
 		}
 	]
 };
