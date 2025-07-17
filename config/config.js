@@ -111,6 +111,10 @@ let config = {
 		{
 		module: "MMM-EmotionWeather",
 		position: "top_left" // ← 你可以改成想顯示的位置
+		},
+		{
+		module: "MMM-HorizontalLine",
+		position: "bottom_center" // ✅ 就會顯示在畫面底部中央
 		}
 	]
 };
