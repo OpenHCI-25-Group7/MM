@@ -1,0 +1,12 @@
+.date-block {
+  position: fixed; /* 用 fixed 不會被上層限制 */
+  top: 1250px;
+  left: 180px;
+  z-index: 10;      /* 確保在畫面上層 */
+}
+
+.date-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 28px;
+  font-family: "Noto Sans TC", sans-serif;
+}

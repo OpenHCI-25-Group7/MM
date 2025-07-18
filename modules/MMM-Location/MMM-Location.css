@@ -1,0 +1,20 @@
+.location-block {
+  position: fixed;
+  top: 1200px;     /* 可自行調整縱向位置 */
+  left: 200px;     /* 可自行調整橫向位置 */
+  z-index: 10;
+}
+
+.location-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 28px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.location-icon {
+  width: 28px;
+  height: 28px;
+}
