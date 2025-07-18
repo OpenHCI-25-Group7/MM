@@ -39,10 +39,10 @@ Module.register("MMM-EmotionWeather", {
   const wrapper = document.createElement("div");
   wrapper.className = "emotion-container";
 
-  // 每日建議
+  // 每日新聞
   const suggestion = document.createElement("div");
   suggestion.innerHTML = `
-    <div class="section-title">家庭分析</div>
+    <div class="section-title">每日新聞</div>
     <div class="section-text">${this.config.suggestion}</div>
   `;
   wrapper.appendChild(suggestion);

@@ -45,10 +45,10 @@ let config = {
 			module: "updatenotification",
 			position: "top_bar"
 		},
-		/*{
+		{
 			module: "clock",
-			position: "top_left"
-		},*/
+			position: "bottom_left"
+		},
 		/*{
 			module: "calendar",
 			position: "top_left",
@@ -124,14 +124,14 @@ let config = {
 			module: "MMM-Date",
 			position: "bottom_left", // 你可以改成想顯示的位置
 		},
-		{
+		/*{
 			module: "MMM-Sunrise",
 			position: "top_left"
 		},
 		{
 			module: "MMM-Sunset",
 			position: "top_left"
-		},
+		},*/
 		{
 			module: "MMM-SimpleTemp",
 			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置

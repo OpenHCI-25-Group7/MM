@@ -8,11 +8,11 @@ Module.register("clock", {
 		timeFormat: config.timeFormat,
 		timezone: null,
 
-		displaySeconds: true,
+		displaySeconds: false,
 		showPeriod: true,
 		showPeriodUpper: false,
 		clockBold: false,
-		showDate: true,
+		showDate: false,
 		showTime: true,
 		showWeek: false, // options: true, false, 'short'
 		dateFormat: "dddd, LL",
@@ -222,7 +222,7 @@ Module.register("clock", {
 				  + `<span><i class="fas fa-arrow-down" aria-hidden="true"></i> ${moonSet ? formatTime(this.config, moonSet) : "..."}</span>`;
 			digitalWrapper.appendChild(moonWrapper);
 		}
-
+/*
 		if (this.config.showWeek) {
 			if (this.config.showWeek === "short") {
 				weekWrapper.innerHTML = this.translate("WEEK_SHORT", { weekNumber: now.week() });
@@ -231,7 +231,7 @@ Module.register("clock", {
 			}
 
 			digitalWrapper.appendChild(weekWrapper);
-		}
+		}*/
 
 		/****************************************************************
 		 * Create wrappers for ANALOG clock, only if specified in config

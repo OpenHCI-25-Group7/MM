@@ -18,7 +18,7 @@ Module.register("MMM-Location", {
     wrapper.innerHTML = `
       <div class="location-title">
         <img src="modules/MMM-Location/icons/custom-location.svg" class="location-icon">
-        ${region}
+        <span class="location-text">${region}</span>
       </div>
     `;
 
