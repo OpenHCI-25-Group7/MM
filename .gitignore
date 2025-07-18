@@ -60,7 +60,6 @@ Temporary Items
 !/modules/default
 !/modules/default/**
 !/modules/README.md**
-!/modules/MMM-EmotionWeather/**
 !/modules/MMM-Date/**
 !/modules/MMM-Location/**
 !/modules/MMM-Sunrise/**
