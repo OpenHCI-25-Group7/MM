@@ -44,7 +44,7 @@ Module.register("MMM-EmotionWeather", {
   const suggestion = document.createElement("div");
   suggestion.innerHTML = `
     <div class="section-title">每日新聞</div>
-    <div class="section-text">${this.config.suggestion}</div>
+    <div class="section-text"><span>${this.config.suggestion}</span></div>
   `;
   wrapper.appendChild(suggestion);
 
@@ -52,7 +52,7 @@ Module.register("MMM-EmotionWeather", {
   const fortune = document.createElement("div");
   fortune.innerHTML = `
     <div class="section-title">每日運勢</div>
-    <div class="section-text">家庭運勢：${this.config.fortune}</div>
+    <div class="section-text"><span>家庭運勢：${this.config.fortune}</span></div>
   `;
   wrapper.appendChild(fortune);
 
