@@ -1,17 +1,26 @@
 .location-block {
   position: fixed;
-  top: 1550px;     /* 可自行調整縱向位置 */
-  right: 96px !important;     /* 可自行調整橫向位置 */
+  bottom: 298px;
+  right: 96px;
   z-index: 10;
+  display: flex;
+  align-items: center;  /* 垂直置中對齊 */
+  gap: 12px;             /* icon 和文字間距 */
 }
 
 .location-title {
-  font-size: 32px !important;
-    font-family: "Noto Sans TC", sans-serif;
-    color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  font-size: 32px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 120%;
+  top: -4px;
 }
 
 .location-icon {
-  width: 48px !important;
-  height: 48px !important;
+  width: 48px;   /* 或與文字高度差不多，例如 32px */
+  height: 48px;
+  object-fit: contain; /* 保持圖示比例 */
+  margin-bottom: -11px;
 }

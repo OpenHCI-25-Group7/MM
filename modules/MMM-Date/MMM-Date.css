@@ -5,9 +5,15 @@
 
 .date-subtitle {
   position: fixed;
-  top: 1550px;
+  bottom: 298px;
   left: 96px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 32px;
+
+  /* Figma Typography 對應 */
+  color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
   font-family: "Noto Sans TC", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;         /* 即 44.8px */
+  letter-spacing: 5px;
 }

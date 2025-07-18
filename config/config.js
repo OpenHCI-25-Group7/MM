@@ -45,10 +45,10 @@ let config = {
 			module: "updatenotification",
 			position: "top_bar"
 		},
-		{
+		/*{
 			module: "clock",
 			position: "bottom_left"
-		},
+		},*/
 		/*{
 			module: "calendar",
 			position: "top_left",
@@ -143,6 +143,10 @@ let config = {
 				lat: 25.038,
 				lon: 121.5645
 			}
+		},
+		{
+			module: "MMM-CustomClock",
+			position: "bottom_left"
 		}
 	]
 };

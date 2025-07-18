@@ -1,8 +1,9 @@
 .clock-grid {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   gap: 15px;
-  padding-left: 130px;
-  padding-bottom: 50px;
 }
 
 .clock-grid-left {
@@ -25,7 +26,7 @@
   place-self: center;
   position: relative;
   border-radius: 50%;
-  background-size: 100%;
+  background-size: 100%;  
 }
 
 .clock-face {
@@ -46,30 +47,14 @@
   display: block;
 }
 
-.clock-hour {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -2px 0 -2px -25%; /* numbers must match negative length & thickness */
-  padding: 2px 0 2px 25%; /* indicator length & thickness */
-  background: var(--color-text-bright);
-  transform-origin: 100% 50%;
-  border-radius: 3px 0 0 3px;
-}
-
-.clock-minute {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -35% -2px 0; /* numbers must match negative length & thickness */
-  padding: 35% 2px 0; /* indicator length & thickness */
-  background: var(--color-text-bright);
-  transform-origin: 50% 100%;
-  border-radius: 3px 0 0 3px;
+.clock .clock-hour-digital,
+.clock .clock-minute-digital {
+  font-size: 100px;
+  font-weight: 500;
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 110%;
+  letter-spacing: 0.374px;
 }
 
 .clock-second {
