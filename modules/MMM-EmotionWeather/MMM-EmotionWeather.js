@@ -24,6 +24,7 @@ Module.register("MMM-EmotionWeather", {
       .then(res => res.json())
       .then(data => {
         if (data.result) {
+          // 內容在 suggestion 和furtune 中
           this.config.suggestion = data.result.suggestion || "未提供建議";
           this.config.fortune = data.result.fortune || "未提供運勢";
           this.config.weather = data.result.weather || null;
