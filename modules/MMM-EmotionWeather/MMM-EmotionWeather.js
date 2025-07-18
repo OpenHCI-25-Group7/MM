@@ -42,7 +42,7 @@ Module.register("MMM-EmotionWeather", {
   // 每日建議
   const suggestion = document.createElement("div");
   suggestion.innerHTML = `
-    <div class="section-title">每日建議</div>
+    <div class="section-title">家庭分析</div>
     <div class="section-text">${this.config.suggestion}</div>
   `;
   wrapper.appendChild(suggestion);
