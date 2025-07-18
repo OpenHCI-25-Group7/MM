@@ -15,18 +15,18 @@ Module.register("MMM-TodayWeatherStatus", {
   },
 
   getWeather() {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${this.config.lat}&longitude=${this.config.lon}&current=weather_code`;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${this.config.lat}&longitude=${this.config.lon}&current=weather_code`;
 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        const code = data.current.weather_code;
-        this.updateWeatherStatus(code);
-        this.updateDom();
-      })
-      .catch(err => {
-        console.error("無法取得天氣資料", err);
-      });
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const code = data.current.weather_code;
+      this.updateWeatherStatus(code);
+      this.updateDom();
+    })
+    .catch(err => {
+      console.error("無法取得天氣資料", err);
+    });
   },
 
   updateWeatherStatus(code) {
@@ -56,15 +56,18 @@ Module.register("MMM-TodayWeatherStatus", {
     text.className = "today-weather-text";
     text.innerText = this.weatherText;
 
-    const icon = document.createElement("img");
-    icon.className = "today-weather-icon";
-    icon.src = `${this.file(this.weatherIcon)}`;
-
     wrapper.appendChild(text);
-    wrapper.appendChild(icon);
+
+    if (this.weatherIcon) {
+      const icon = document.createElement("img");
+      icon.className = "today-weather-icon";
+      icon.src = this.file(this.weatherIcon);
+      wrapper.appendChild(icon);
+    }
 
     return wrapper;
   },
+
 
   getStyles() {
     return ["MMM-TodayWeatherStatus.css"];

@@ -147,6 +147,10 @@ let config = {
 		{
 			module: "MMM-CustomClock",
 			position: "bottom_left"
+		},
+		{
+			module: "MMM-FamilyWeatherStatus",
+			position: "top_right" // or "none"，你已經用 fixed 定位
 		}
 	]
 };
