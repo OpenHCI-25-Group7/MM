@@ -89,17 +89,5 @@
   pointer-events: none;
 }
 
-/* 隱藏所有 weather 模組內容 */
-.region.middle.center .weather * {
-  display: none !important;
-}
 
-/* 只顯示溫度 */
-.region.middle.center .weather .temperature {
-  display: block !important;
-  font-size: 100px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
 

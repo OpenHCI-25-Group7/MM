@@ -133,18 +133,9 @@ let config = {
 			position: "top_left"
 		},
 		{
-			module: "weather",
-			position: "middle_center",  // ✅ 你可以改位置
-			config: {
-				weatherProvider: "openmeteo",
-				type: "current",
-				lat: 25.038,         // ✅ 你的緯度（例如台北）
-				lon: 121.5645,       // ✅ 你的經度（例如台北）
-				location: "Taipei",
-				showLocation: false  // ❌ 不要顯示城市名稱
-			}
+			module: "MMM-SimpleTemp",
+			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
 		}
-
 
 	]
 };
