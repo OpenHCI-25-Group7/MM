@@ -123,15 +123,15 @@ let config = {
 		{
 			module: "MMM-Date",
 			position: "bottom_left", // 你可以改成想顯示的位置
+		},
+		{
+			module: "MMM-Sunrise",
+			position: "top_left"
+		},
+		{
+			module: "MMM-Sunset",
+			position: "top_left"
 		}
-		/*{
-			module: "MMM-SunTimes",
-			position: "bottom_center", // 或任何你要的位置
-			config: {
-				latitude: 25.0330,
-				longitude: 121.5654
-			}
-		}*/
 
 	]
 };

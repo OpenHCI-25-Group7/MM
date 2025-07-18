@@ -9,12 +9,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 28px;
+  font-size: 40px;
   font-family: "Noto Sans TC", sans-serif;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .location-icon {
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
 }
