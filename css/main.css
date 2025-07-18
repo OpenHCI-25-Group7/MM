@@ -35,7 +35,7 @@ body {
   position: absolute;
   height: calc(100% - var(--gap-body-top) - var(--gap-body-bottom));
   width: calc(100% - var(--gap-body-right) - var(--gap-body-left));
-  background: var(--color-background);
+  /*background: var(--color-background);*/
   color: var(--color-text);
   font-family: var(--font-primary), sans-serif;
   font-weight: 400;
