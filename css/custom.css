@@ -88,6 +88,14 @@
   opacity: 1; /* 可調透明度，看你模組文字會不會看不清楚 */
   pointer-events: none;
 }
+.module.clock .clock-hour-digital,
+.module.clock .clock-minute-digital {
+  font-size: 100px; /* 想要多大就改這個數值 */
+}
+
+.module.clock .clock-second-digital {
+  font-size: 32px; /* 秒數通常比時分小一點 */
+}
 
 
 

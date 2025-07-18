@@ -135,8 +135,15 @@ let config = {
 		{
 			module: "MMM-SimpleTemp",
 			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
+		},
+		{
+			module: "MMM-TodayWeatherStatus",
+			position: "bottom_center", // 你想顯示的位置
+			config: {
+				lat: 25.038,
+				lon: 121.5645
+			}
 		}
-
 	]
 };
 
