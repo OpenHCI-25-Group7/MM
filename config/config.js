@@ -109,17 +109,30 @@ let config = {
 			}
 		},*/
 		{
-		module: "MMM-EmotionWeather",
-		position: "top_left" // ← 你可以改成想顯示的位置
+			module: "MMM-EmotionWeather",
+			position: "top_left" // ← 你可以改成想顯示的位置
 		},
 		{
-		module: "MMM-HorizontalLine",
-		position: "bottom_center" // ✅ 就會顯示在畫面底部中央
+			module: "MMM-HorizontalLine",
+			position: "bottom_center" // ✅ 就會顯示在畫面底部中央
 		},
 		{
-		module: "MMM-LocationDate",
-		position: "bottom_left" // 位置其實沒用，因為你用 absolute 定位了
+			module: "MMM-Location",
+			position: "bottom_left" // 位置其實沒用，因為你用 absolute 定位了
+		},
+		{
+			module: "MMM-Date",
+			position: "bottom_left", // 你可以改成想顯示的位置
 		}
+		/*{
+			module: "MMM-SunTimes",
+			position: "bottom_center", // 或任何你要的位置
+			config: {
+				latitude: 25.0330,
+				longitude: 121.5654
+			}
+		}*/
+
 	]
 };
 

@@ -61,6 +61,8 @@ Temporary Items
 !/modules/default/**
 !/modules/README.md**
 !/modules/MMM-EmotionWeather/**
+!/modules/MMM-Date/**
+!/modules/MMM-Location/**
 
 # Ignore changes to the custom css files but keep the sample and main.
 /css/*
