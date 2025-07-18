@@ -56,17 +56,8 @@ Temporary Items
 .Trash-*
 
 # Ignore all modules except the default modules.
-/modules/**
-!/modules/default
-!/modules/default/**
-!/modules/README.md**
-!/modules/MMM-EmotionWeather/**
-!/modules/MMM-EmotionWeather/MMM-EmotionWeather.css
-!/modules/MMM-Date/**
-!/modules/MMM-Location/**
-!/modules/MMM-Sunrise/**
-!/modules/backgrounds/**
-!/modules/backgrounds/test.mp4
+#/modules/**
+
 
 # Ignore changes to the custom css files but keep the sample and main.
 /css/*

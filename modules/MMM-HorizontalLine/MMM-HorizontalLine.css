@@ -1,0 +1,9 @@
+.horizontal-line {
+  position: fixed;
+  width: 777.779px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+}

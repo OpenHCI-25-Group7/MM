@@ -1,0 +1,35 @@
+.sunset-block {
+  position: absolute;
+  top: 600px;
+  left: 300px;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #fff;
+}
+
+.sun-time-title {
+  display: flex;
+  align-items: center;
+}
+
+.sun-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.sun-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.sun-label {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.sun-time {
+  font-size: 24px;
+  font-weight: bold;
+}

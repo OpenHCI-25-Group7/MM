@@ -1,0 +1,30 @@
+.today-weather-wrapper {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.today-weather-text {
+  position: fixed;
+  bottom: 217px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  width: auto;
+
+  color: rgba(255, 255, 255, 0.9);             /* 對應 Figma 色碼 */
+  font-family: "Noto Sans TC";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;                            /* ✅ 非粗體，為正常字重 */
+  line-height: 140%;                           /* 即 44.8px */
+  letter-spacing: 0.32px;
+}
+.today-weather-icon {
+  position: fixed;
+  width: 124px;
+  height: 124px;
+  bottom: 42px;  
+  left: 50%;           /* ✅ 水平置中 */
+  transform: translateX(-50%);  /* ✅ 讓圖示中心對齊畫面中心 */
+  display: block;
+}

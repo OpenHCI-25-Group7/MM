@@ -1,0 +1,41 @@
+.sunrise-block {
+  position: fixed;
+  top: 1350px;
+  left: 200px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sun-time-title {
+  display: flex;
+  align-items: center;
+}
+
+.sun-icon {
+  /* position: fixed; ❌移除這一行 */
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain;
+  z-index: 10;
+}
+
+.sun-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.sun-label {
+  /* position: fixed; ❌移除這一行 */
+  color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
+  font-family: "Noto Sans TC";
+  font-size: 32px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.sun-time {
+  font-size: 24px;
+  font-weight: bold;
+}
