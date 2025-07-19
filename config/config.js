@@ -66,6 +66,16 @@ let config = {
 			position: 'top_left',
 		},
 		{
+			module: 'MMM-EmotionWeather',
+			classes: 'page3',
+			position: 'top_left',
+		},
+		{
+			module: 'MMM-EmotionWeather',
+			classes: 'page4',
+			position: 'top_left',
+		},
+		{
 			module: "MMM-HorizontalLine",
 			classes: "page0", // 這個模組會在每個頁面顯示一條水平線
 			position: "top_bar", // 你可以改成其他位置
@@ -78,6 +88,16 @@ let config = {
 		{
 			module: "MMM-HorizontalLine",
 			classes: "page2", // 這個模組會在每個頁面顯示一條水平線
+			position: "top_bar", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-HorizontalLine",
+			classes: "page3", // 這個模組會在每個頁面顯示一條水平線
+			position: "top_bar", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-HorizontalLine",
+			classes: "page4", // 這個模組會在每個頁面顯示一條水平線
 			position: "top_bar", // 你可以改成其他位置
 		},
 		{
@@ -102,6 +122,16 @@ let config = {
 			position: "top_right", // 你可以改成其他位置
 		},
 		{
+			module: "MMM-Date",
+			classes: "page3", // 這個模組會在每個頁面顯示日期
+			position: "top_right", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-Date",
+			classes: "page4", // 這個模組會在每個頁面顯示日期
+			position: "top_right", // 你可以改成其他位置
+		},
+		{
 			module: "MMM-SimpleTemp",
 			classes: "page0", // 這個模組會在每個頁面顯示簡單的溫度資訊
 			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
@@ -114,6 +144,16 @@ let config = {
 		{
 			module: "MMM-SimpleTemp",
 			classes: "page2", // 這個模組會在每個頁面顯示簡單的溫度資訊
+			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
+		},
+		{
+			module: "MMM-SimpleTemp",
+			classes: "page3", // 這個模組會在每個頁面顯示簡單的溫度資訊
+			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
+		},
+		{
+			module: "MMM-SimpleTemp",
+			classes: "page4", // 這個模組會在每個頁面顯示簡單的溫度資訊
 			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
 		},
 		{
@@ -141,6 +181,16 @@ let config = {
 			position: "bottom_left"
 		},
 		{
+			module: "MMM-CustomClock",
+			classes: "page3", // 這個模組會在第二頁顯示自訂時鐘
+			position: "bottom_left"
+		},
+		{
+			module: "MMM-CustomClock",
+			classes: "page4", // 這個模組會在第二頁顯示自訂時鐘
+			position: "bottom_left"
+		},
+		{
 			module: "MMM-FamilyWeatherStatus",
 			classes: "page0", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
 			position: "top_right" // or "none"，你已經用 fixed 定位
@@ -153,6 +203,16 @@ let config = {
 		{
 			module: "MMM-FamilyWeatherStatus",
 			classes: "page2", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
+			position: "top_right" // or "none"，你已經用 fixed 定位
+		},
+		{
+			module: "MMM-FamilyWeatherStatus",
+			classes: "page3", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
+			position: "top_right" // or "none"，你已經用 fixed 定位
+		},
+		{
+			module: "MMM-FamilyWeatherStatus",
+			classes: "page4", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
 			position: "top_right" // or "none"，你已經用 fixed 定位
 		},
 

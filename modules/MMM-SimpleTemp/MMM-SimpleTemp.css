@@ -16,7 +16,7 @@
 .module.page1 .simple-temp {
   position: absolute;
   right: 476px;
-  bottom: -800px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
+  bottom: -810px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
   
   font-family: "Noto Sans TC";
   font-size: 56px;
@@ -31,7 +31,7 @@
 .module.page2 .simple-temp {
   position: absolute;
   right: 476px;
-  bottom: -800px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
+  bottom: -810px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
   
   font-family: "Noto Sans TC";
   font-size: 56px;
@@ -46,7 +46,7 @@
 .module.page3 .simple-temp {
   position: absolute;
   right: 476px;
-  bottom: -800px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
+  bottom: -810px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
   
   font-family: "Noto Sans TC";
   font-size: 56px;
@@ -61,7 +61,7 @@
 .module.page4 .simple-temp {
   position: absolute;
   right: 476px;
-  bottom: -800px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
+  bottom: -810px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
   
   font-family: "Noto Sans TC";
   font-size: 56px;
