@@ -7,6 +7,10 @@ Module.register("MMM-FamilyWeatherStatus", {
   start() {
     this.status = "載入中...";
     this.icon = null;
+
+    this.badWeatherStart = null;
+    this.lastStatus = null;
+
     this.getWeather();
     setInterval(() => {
       this.getWeather();
@@ -23,6 +27,23 @@ Module.register("MMM-FamilyWeatherStatus", {
       .then(data => {
         this.status = data.status || "未知天氣";
         this.icon = this.mapIcon(this.status);
+
+        // ➕ 播放影片的邏輯
+        const now = Date.now();
+        if (["小雨", "雷陣雨"].includes(this.status)) {
+          if (this.lastStatus === this.status) {
+            if (this.badWeatherStart && now - this.badWeatherStart >= 2 * 60 * 1000) {
+              this.sendNotification("PLAY_BACKGROUND_VIDEO");
+              this.badWeatherStart = null; // 播完一次後重置
+            }
+          } else {
+            this.badWeatherStart = now;
+          }
+        } else {
+          this.badWeatherStart = null;
+        }
+        this.lastStatus = this.status;
+
         this.updateDom();
       })
       .catch(err => {
@@ -36,7 +57,7 @@ Module.register("MMM-FamilyWeatherStatus", {
       case "陰天": return "cloudy.svg";
       case "小雨": return "rainy.svg";
       case "雷陣雨": return "thunder.svg";
-      default: return null; // ❗ 不回傳 unknown.svg，避免 404
+      default: return null;
     }
   },
 
@@ -55,7 +76,6 @@ Module.register("MMM-FamilyWeatherStatus", {
     title.appendChild(status);
     wrapper.appendChild(title);
 
-    // ✅ 只有當有圖示檔名時才加上圖片
     if (this.icon) {
       const icon = document.createElement("img");
       icon.className = "family-weather-icon";
