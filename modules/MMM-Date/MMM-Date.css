@@ -4,9 +4,9 @@
 }
 
 .module.page0 .date-subtitle {
-  position: fixed;
-  bottom: 298px;
-  left: 96px;
+  position: absolute;
+  bottom: -1500px;
+  left: -850px;
 
   /* Figma Typography 對應 */
   color: var(--Text-Primary, rgba(255, 255, 255, 0.90));

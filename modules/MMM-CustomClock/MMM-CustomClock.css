@@ -1,6 +1,6 @@
 .module.page0 .custom-clock-wrapper {
-  position: fixed;
-  bottom: 110px;   /* 調整垂直位置 */
+  position: absolute;
+  bottom: -20px;   /* 調整垂直位置 */
   left: 96px;      /* 調整水平位置 */
   font-size: 100px;
   font-family: "Noto Sans TC", sans-serif;
@@ -8,7 +8,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 .module.page1 .custom-clock-wrapper {
-  position: fixed;
+  position: absolute;
   bottom: 110px;   /* 調整垂直位置 */
   left: 96px;      /* 調整水平位置 */
   font-size: 56px;

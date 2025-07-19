@@ -1,7 +1,7 @@
 .module.page0 .simple-temp {
   position: absolute;
-  right: 30px;
-  bottom: -800px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
+  right: -40px;
+  bottom: -850px; /* ✅ 建議從 figma 測量距離，這裡是假設值，你可以微調 */
   
   font-family: "Noto Sans TC";
   font-size: 100px;
