@@ -49,7 +49,7 @@ body {
 
 .dimmed {
   color: var(--color-text-dimmed);
-  display:none;
+  display: none;
 }
 
 .normal {
@@ -135,7 +135,6 @@ sup {
 /**
  * Module styles.
  */
-
 .module {
   margin-bottom: var(--gap-modules);
 }

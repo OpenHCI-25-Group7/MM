@@ -221,7 +221,7 @@ let config = {
 		{// 新加上的頁面
 			module: "MMM-InfoPage",
 			classes: "page5", // 第一頁資訊
-			position: "fullscreen_above" // 或你想要的區域
+			position: "fullscreen_below" // 或你想要的區域
 		},
 		{
 			module: "MMM-BackgroundVideo",
