@@ -49,10 +49,12 @@ body {
 
 .dimmed {
   color: var(--color-text-dimmed);
+  display:none;
 }
 
 .normal {
   color: var(--color-text);
+  display: none;
 }
 
 .bright {

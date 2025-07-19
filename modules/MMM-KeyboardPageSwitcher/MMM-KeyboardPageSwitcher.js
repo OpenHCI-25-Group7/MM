@@ -9,7 +9,25 @@ Module.register("MMM-KeyboardPageSwitcher", {
       } else if (e.key === "2") {
         this.sendNotification("PAGE_CHANGED", 1); // 切到第 2 頁
         console.log("👉 切換到第 2 頁");
+      }else if (e.key === "3") {
+        this.sendNotification("PAGE_CHANGED", 2); // 切到第 3 頁
+        console.log("👉 切換到第 3 頁");
       }
     });
-  }
+  },
+  // getDom: function () {
+  //   const pageSwitcher = document.createElement("pageSwitcher");
+  //   pageSwitcher.id = "page-switcher-display";
+  //   pageSwitcher.innerHTML = `
+  //     <div class="pageSwitcher-content">
+  //     5555555555
+  //     </div>
+  //   `;
+  // },
+  // getStyles() {
+  //   return ["MMM-KeyboardPageSwitcher.css"];
+  // }
+
 });
+
+

@@ -10,18 +10,18 @@
  */
 let config = {
 	address: "localhost",	// Address to listen on, can be:
-							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
-							// - another specific IPv4/6 to listen on a specific interface
-							// - "0.0.0.0", "::" to listen on any interface
-							// Default, when address config is left out or empty, is "localhost"
+	// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
+	// - another specific IPv4/6 to listen on a specific interface
+	// - "0.0.0.0", "::" to listen on any interface
+	// Default, when address config is left out or empty, is "localhost"
 	port: 8080,
 	basePath: "/",	// The URL path where MagicMirror² is hosted. If you are using a Reverse proxy
-									// you must set the sub path here. basePath must end with a /
+	// you must set the sub path here. basePath must end with a /
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],	// Set [] to allow all IP addresses
-									// or add a specific IPv4 of 192.168.1.5 :
-									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
-									// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
-									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	// or add a specific IPv4 of 192.168.1.5 :
+	// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
+	// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
+	// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
 	useHttps: false,			// Support HTTPS or not, default "false" will use HTTP
 	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
@@ -29,9 +29,9 @@ let config = {
 
 	language: "zh_tw",
 	locale: "zh-TW",   // this variable is provided as a consistent location
-			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
-			   // as we have no usage, we  have no constraints on what this field holds
-			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
+	// it is currently only used by 3rd party modules. no MagicMirror code uses this value
+	// as we have no usage, we  have no constraints on what this field holds
+	// see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
 
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
@@ -39,12 +39,138 @@ let config = {
 
 	modules: [
 		{
-			module: "alert",
+			module: 'MMM-pages',
+			config: {
+				modules: [
+					['page0'],
+					['page1'],
+					['page2'],
+				]
+			}
 		},
 		{
-			module: "updatenotification",
-			position: "top_bar"
+			module: 'MMM-EmotionWeather',
+			classes: 'page0',
+			position: 'top_left',
 		},
+		{
+			module: 'MMM-EmotionWeather',
+			classes: 'page1',
+			position: 'top_left',
+		},
+		{
+			module: 'MMM-EmotionWeather',
+			classes: 'page2',
+			position: 'top_left',
+		},
+		{
+			module: "MMM-HorizontalLine",
+			classes: "page0", // 這個模組會在每個頁面顯示一條水平線
+			position: "top_bar", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-Location",
+			classes: "page0", // 這個模組會在每個頁面顯示位置資訊
+			position: "top_left", // 你可以改成其他位置
+		
+		},
+		{
+			module: "MMM-Date",
+			classes: "page0", // 這個模組會在每個頁面顯示日期
+			position: "top_right", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-Date",
+			classes: "page1", // 這個模組會在每個頁面顯示日期
+			position: "top_right", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-Date",
+			classes: "page2", // 這個模組會在每個頁面顯示日期
+			position: "top_right", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-SimpleTemp",
+			classes: "page0", // 這個模組會在每個頁面顯示簡單的溫度資訊
+			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
+		},
+		{
+			module: "MMM-SimpleTemp",
+			classes: "page1", // 這個模組會在每個頁面顯示簡單的溫度資訊
+			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
+		},
+		{
+			module: "MMM-SimpleTemp",
+			classes: "page2", // 這個模組會在每個頁面顯示簡單的溫度資訊
+			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
+		},
+		{
+			module: "MMM-TodayWeatherStatus",
+			classes: "page0", // 這個模組會在每個頁面顯示今天的天氣狀態
+			position: "bottom_center", // 你想顯示的位置
+			config: {
+				lat: 25.038,
+				lon: 121.5645
+			}
+		},
+		{
+			module: "MMM-CustomClock",
+			classes: "page0", // 這個模組會在第二頁顯示自訂時鐘
+			position: "bottom_left"
+		},
+		{
+			module: "MMM-CustomClock",
+			classes: "page1", // 這個模組會在第二頁顯示自訂時鐘
+			position: "bottom_left"
+		},
+		{
+			module: "MMM-CustomClock",
+			classes: "page2", // 這個模組會在第二頁顯示自訂時鐘
+			position: "bottom_left"
+		},
+		{
+			module: "MMM-FamilyWeatherStatus",
+			classes: "page0", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
+			position: "top_right" // or "none"，你已經用 fixed 定位
+		},
+		{
+			module: "MMM-FamilyWeatherStatus",
+			classes: "page1", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
+			position: "top_right" // or "none"，你已經用 fixed 定位
+		},
+		{
+			module: "MMM-FamilyWeatherStatus",
+			classes: "page2", // 這個模組會在每個頁面顯示家庭成員的天氣狀態
+			position: "top_right" // or "none"，你已經用 fixed 定位
+		},
+
+
+		
+		{
+			module: "MMM-BackgroundVideo",
+			classes: "page0", // 第一頁背景
+			position: "fullscreen_above" // 第一頁背景
+		},
+		{
+			module: "MMM-BackgroundVideo2",
+			classes: "page1", // 第二頁背景
+			position: "fullscreen_above" // 第二頁背景
+		},
+		{
+			module: "MMM-BackgroundVideo3",
+			classes: "page2", // 第三頁背景
+			position: "fullscreen_above" // 第二頁背景
+		},
+		{
+			module: "MMM-KeyboardPageSwitcher",
+			position: "top_bar" // 這個模組可以放在任何位置，因為它只監聽鍵盤事件
+		}
+	]
+};
+
+/*************** DO NOT EDIT THE LINE BELOW ***************/
+if (typeof module !== "undefined") { module.exports = config; }
+
 		/*{
 			module: "clock",
 			position: "bottom_left"
@@ -108,74 +234,31 @@ let config = {
 				broadcastNewsUpdates: true
 			}
 		},*/
-		{
-			module: "MMM-EmotionWeather",
-			position: "top_left" // ← 你可以改成想顯示的位置
-		},
-		{
-			module: "MMM-HorizontalLine",
-			position: "bottom_center" // ✅ 就會顯示在畫面底部中央
-		},
-		{
-			module: "MMM-Location",
-			position: "bottom_left" // 位置其實沒用，因為你用 absolute 定位了
-		},
-		{
-			module: "MMM-Date",
-			position: "bottom_left", // 你可以改成想顯示的位置
-		},
-		/*{
-			module: "MMM-Sunrise",
-			position: "top_left"
-		},
-		{
-			module: "MMM-Sunset",
-			position: "top_left"
-		},*/
-		{
-			module: "MMM-SimpleTemp",
-			position: "middle_center", // ← 你可以改成 bottom_center 等你想要的位置
-		},
-		{
-			module: "MMM-TodayWeatherStatus",
-			position: "bottom_center", // 你想顯示的位置
-			config: {
-				lat: 25.038,
-				lon: 121.5645
-			}
-		},
-		{
-			module: "MMM-CustomClock",
-			position: "bottom_left"
-		},
-		{
-			module: "MMM-FamilyWeatherStatus",
-			position: "top_right" // or "none"，你已經用 fixed 定位
-		},
-		{
-			module: 'MMM-Pages',
-			config: {
-				modules: [
-				// 頁面 1（主頁面）
-				[
-					"MMM-EmotionWeather",
-					"MMM-FamilyWeatherStatus",
-					"MMM-Date",
-					"MMM-CustomClock",
-					"MMM-TodayWeatherStatus",
-					"MMM-Location",
-					"MMM-SimpleTemp",
-					"MMM-BackgroundVideo" // ✅ 第一頁背景加在這
-				],
-				// 頁面 2（背景影片頁）
-				[
-					"MMM-BackgroundVideo2" // ✅ 第二頁背景加在這
-				]
-				],
-				fixed: [], // 永遠顯示的模組，這裡你已經設定為空沒問題
-				// rotationTime: 0 // 禁用自動輪播
-			}
-		},
+
+			// {
+		// 	module: 'MMM-Pages',
+		// 	config: {
+		// 		modules: [
+		// 		// 頁面 1（主頁面）
+		// 		[
+		// 			"MMM-EmotionWeather",
+		// 			"MMM-FamilyWeatherStatus",
+		// 			"MMM-Date",
+		// 			"MMM-CustomClock",
+		// 			"MMM-TodayWeatherStatus",
+		// 			"MMM-Location",
+		// 			"MMM-SimpleTemp",
+		// 			"MMM-BackgroundVideo" // ✅ 第一頁背景加在這
+		// 		],
+		// 		// 頁面 2（背景影片頁）
+		// 		[
+		// 			"MMM-BackgroundVideo2" // ✅ 第二頁背景加在這
+		// 		]
+		// 		],
+		// 		fixed: [], // 永遠顯示的模組，這裡你已經設定為空沒問題
+		// 		// rotationTime: 0 // 禁用自動輪播
+		// 	}
+		// },
 
 		/*{
 			module: "MMM-ProximityPageSwitcher",
@@ -184,16 +267,11 @@ let config = {
 				threshold: 100
 			}
 		}*/
-		{
-		module: "MMM-BackgroundVideo",
-		position: "fullscreen_above" // 第一頁背景
+				/*{
+			module: "MMM-Sunrise",
+			position: "top_left"
 		},
 		{
-		module: "MMM-BackgroundVideo2",
-		position: "fullscreen_above" // 第二頁背景
-		},
-	]
-};
-
-/*************** DO NOT EDIT THE LINE BELOW ***************/
-if (typeof module !== "undefined") { module.exports = config; }
+			module: "MMM-Sunset",
+			position: "top_left"
+		},*/
