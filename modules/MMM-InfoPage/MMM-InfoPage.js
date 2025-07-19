@@ -4,6 +4,10 @@ Module.register("MMM-InfoPage", {
         wrapper.className = "MMM-InfoPage";
         wrapper.innerHTML = `
             <div class="container-box">
+                 <!-- 📊 左側長條圖 -->
+                <div class="chart-section">
+                    <img src="modules/MMM-InfoPage/Spectrum.png" alt="長條圖" class="vertical-chart">
+                </div>
                 <!-- 📅 左側日曆 -->
                 <div class="calendar">
                     <h5>Jul 2025</h5>
