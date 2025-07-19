@@ -156,10 +156,10 @@ let config = {
 		},
 
 
-		{
-		module: "MMM-MyMaterialPage",
-		position: "top_left" // 或你想要的區域
-		},
+		//{// 新加上的頁面
+		//module: "MMM-InfoPage",
+		//position: "top_left" // 或你想要的區域
+		//},
 		{
 			module: "MMM-BackgroundVideo",
 			classes: "page0", // 第一頁背景
