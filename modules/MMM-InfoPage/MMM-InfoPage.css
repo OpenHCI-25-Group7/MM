@@ -1,0 +1,82 @@
+body {
+  background: #000;
+}
+
+.container-box {
+  margin: 2rem auto;
+  max-width: 700px;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.calendar {
+  width: 40%;
+  background: #f5f5f5;
+  padding: 1rem;
+  color: #000;
+}
+
+.calendar h5 {
+  font-weight: bold;
+  color: #000;
+  margin-top: 1rem;
+}
+
+.calendar .collection-item.active-date {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: auto;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.calendar .dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.record {
+  width: 60%;
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #eee;
+}
+
+.record h6 {
+  font-weight: bold;
+}
+
+.record ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.record ul li {
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.btn-flat.custom {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #000;
+  width: 100px;
+  align-self: center;
+  margin-top: 2rem;
+}
