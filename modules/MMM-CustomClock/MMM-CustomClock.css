@@ -16,7 +16,27 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
 }
-
+/*2*/
+.module.page2 .custom-clock-wrapper {
+  position: fixed;
+  bottom: 110px;   /* 調整垂直位置 */
+  left: 96px;      /* 調整水平位置 */
+  font-size: 56px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+/*3*/
+.module.page3 .custom-clock-wrapper {
+  position: fixed;
+  bottom: 110px;   /* 調整垂直位置 */
+  left: 96px;      /* 調整水平位置 */
+  font-size: 56px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+/*4*/
 .module.page2 .custom-clock-wrapper {
   position: fixed;
   bottom: 110px;   /* 調整垂直位置 */

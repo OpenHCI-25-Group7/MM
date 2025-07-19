@@ -12,6 +12,12 @@ Module.register("MMM-KeyboardPageSwitcher", {
       }else if (e.key === "3") {
         this.sendNotification("PAGE_CHANGED", 2); // 切到第 3 頁
         console.log("👉 切換到第 3 頁");
+      }else if (e.key === "4") {
+        this.sendNotification("PAGE_CHANGED", 3); // 切到第 4 頁
+        console.log("👉 切換到第 4 頁");
+      }else if (e.key === "5") {
+        this.sendNotification("PAGE_CHANGED", 4); // 切到第 5 頁
+        console.log("👉 切換到第 5 頁");
       }
     });
   },

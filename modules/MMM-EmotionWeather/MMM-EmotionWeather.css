@@ -88,7 +88,7 @@
 
 
 
-/* MMM-EmotionWeather.css */
+/* MMM-EmotionWeather.css 1*/
 
 .module.page1 .emotion-container {
   position: absolute;
@@ -169,7 +169,7 @@
   animation: scroll-left 15s linear infinite;
 }
 
-/* MMM-EmotionWeather.css */
+/* MMM-EmotionWeather.css 2*/
 
 .module.page2 .emotion-container {
   position: absolute;
@@ -245,6 +245,166 @@
 }
 
 .module.page2 .section-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+/* MMM-EmotionWeather.css 3*/
+
+.module.page3 .emotion-container {
+  position: absolute;
+  bottom: -1350px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 20px;
+}
+.module.page3 .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.36px;
+  margin-bottom: 6px;
+}
+.module.page3 .section-text {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+
+.module.page3 .weather-section {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.module.page3 .weather-title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.module.page3 .weather-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.module.page3 .location-date {
+  position: absolute;
+  bottom: 120px;
+  left: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: white;
+}
+
+.module.page3 .location-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.module.page3 .date-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.32px;
+}
+.module.page3 .section-text {
+  position: relative;
+  width: 507px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: none;
+}
+
+.module.page3 .section-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+/* MMM-EmotionWeather.css */
+
+.module.page4 .emotion-container {
+  position: absolute;
+  bottom: -1350px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Noto Sans TC", sans-serif;
+  padding: 20px;
+}
+.module.page4 .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.36px;
+  margin-bottom: 6px;
+}
+.module.page4 .section-text {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+
+.module.page4 .weather-section {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.module.page4 .weather-title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.module.page4 .weather-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.module.page4 .location-date {
+  position: absolute;
+  bottom: 120px;
+  left: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: white;
+}
+
+.module.page4 .location-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.module.page4 .date-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.32px;
+}
+.module.page4 .section-text {
+  position: relative;
+  width: 507px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: none;
+}
+
+.module.page4 .section-text span {
   display: inline-block;
   padding-left: 100%;
   animation: scroll-left 15s linear infinite;

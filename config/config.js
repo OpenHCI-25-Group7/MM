@@ -42,10 +42,11 @@ let config = {
 			module: 'MMM-pages',
 			config: {
 				modules: [
-					['page0'],
-					['page1'],
-					['page2'],
-					['page3'],
+					['page0'], //鏡子 -> 裂開
+					['page1'], //晴天
+					['page2'], //陰天
+					['page3'], //小雨
+					['page4'], //雷陣雨
 				]
 			}
 		},
@@ -171,6 +172,16 @@ let config = {
 			module: "MMM-BackgroundVideo3",
 			classes: "page2", // 第三頁背景
 			position: "fullscreen_above" // 第三頁背景
+		},
+		{
+			module: "MMM-BackgroundVideo4",
+			classes: "page3", // 第四頁背景
+			position: "fullscreen_above" // 第四頁背景
+		},
+		{
+			module: "MMM-BackgroundVideo5",
+			classes: "page4", // 第五頁背景
+			position: "fullscreen_above" // 第五頁背景
 		},
 		{
 			module: "MMM-KeyboardPageSwitcher",
