@@ -69,6 +69,16 @@ let config = {
 			position: "top_bar", // 你可以改成其他位置
 		},
 		{
+			module: "MMM-HorizontalLine",
+			classes: "page1", // 這個模組會在每個頁面顯示一條水平線
+			position: "top_bar", // 你可以改成其他位置
+		},
+		{
+			module: "MMM-HorizontalLine",
+			classes: "page2", // 這個模組會在每個頁面顯示一條水平線
+			position: "top_bar", // 你可以改成其他位置
+		},
+		{
 			module: "MMM-Location",
 			classes: "page0", // 這個模組會在每個頁面顯示位置資訊
 			position: "top_left", // 你可以改成其他位置
@@ -145,7 +155,7 @@ let config = {
 		},
 
 
-		
+
 		{
 			module: "MMM-BackgroundVideo",
 			classes: "page0", // 第一頁背景

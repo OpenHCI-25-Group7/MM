@@ -1,12 +1,53 @@
-.date-block {
+.module.page0 .date-block {
   left: 200px;
   z-index: 10;      /* 確保在畫面上層 */
 }
 
-.date-subtitle {
+.module.page0 .date-subtitle {
   position: fixed;
   bottom: 298px;
   left: 96px;
+
+  /* Figma Typography 對應 */
+  color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;         /* 即 44.8px */
+  letter-spacing: 5px;
+}
+
+
+.module.page1 .date-block {
+  left: 200px;
+  z-index: 10;      /* 確保在畫面上層 */
+}
+
+.module.page1 .date-subtitle {
+  position: fixed;
+  bottom: 130px;
+  right: 96px;
+
+  /* Figma Typography 對應 */
+  color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;         /* 即 44.8px */
+  letter-spacing: 5px;
+}
+
+.module.page2 .date-block {
+  left: 200px;
+  z-index: 10;      /* 確保在畫面上層 */
+}
+
+.module.page2 .date-subtitle {
+  position: fixed;
+  bottom: 130px;
+  right: 96px;
 
   /* Figma Typography 對應 */
   color: var(--Text-Primary, rgba(255, 255, 255, 0.90));

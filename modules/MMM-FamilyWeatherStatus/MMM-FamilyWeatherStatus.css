@@ -1,7 +1,7 @@
-.family-weather-wrapper {
-  position: fixed;
-  top: 60px;    /* 根據你 Figma UI 微調 */
-  right: 80px;
+.module.page0 .family-weather-wrapper {
+  position: absolute;
+  top: -60px;
+  right: 30px;
   color: white;
   font-family: "Noto Sans TC", sans-serif;
   display: flex;
@@ -9,25 +9,101 @@
   align-items: flex-end;
 }
 
-.family-weather-title {
-  position: fixed;
-  top: 116.5px;
-  right: 105.09px;
+.module.page0 .family-weather-title {
+  position: absolute;
+  white-space: nowrap;
+  top: 70px;
   font-size: 32px;
   font-weight: 400;
   line-height: 120%;
 }
 
-.family-weather-status {
+.module.page0 .family-weather-status {
   font-weight: 500;
   margin-left: 8px;
   font-size: 32px;
 }
 
-.family-weather-icon {
-  position: fixed;
-  top: 201px;
-  right: 156.59px;
+.module.page0 .family-weather-icon {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  width: 124px;
+  height: 124px;
+  margin-top: 8px;
+}
+
+
+
+
+.module.page1 .family-weather-wrapper {
+  position: absolute;
+  top: -60px;
+  right: 30px;
+  color: white;
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.module.page1 .family-weather-title {
+  position: absolute;
+  white-space: nowrap;
+  top: 1200px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.module.page1 .family-weather-status {
+  font-weight: 500;
+  margin-left: 8px;
+  font-size: 32px;
+}
+
+.module.page1 .family-weather-icon {
+  position: absolute;
+  top: 1300px;
+  right: 50px;
+  width: 124px;
+  height: 124px;
+  margin-top: 8px;
+}
+
+
+
+
+.module.page2 .family-weather-wrapper {
+  position: absolute;
+  top: -60px;
+  right: 30px;
+  color: white;
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.module.page2 .family-weather-title {
+  position: absolute;
+  white-space: nowrap;
+  top: 1200px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.module.page2 .family-weather-status {
+  font-weight: 500;
+  margin-left: 8px;
+  font-size: 32px;
+}
+
+.module.page2 .family-weather-icon {
+  position: absolute;
+  top: 1300px;
+  right: 50px;
   width: 124px;
   height: 124px;
   margin-top: 8px;
