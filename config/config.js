@@ -45,6 +45,7 @@ let config = {
 					['page0'],
 					['page1'],
 					['page2'],
+					['page3'],
 				]
 			}
 		},
@@ -172,7 +173,7 @@ let config = {
 		{
 			module: "MMM-BackgroundVideo3",
 			classes: "page2", // 第三頁背景
-			position: "fullscreen_above" // 第二頁背景
+			position: "fullscreen_above" // 第三頁背景
 		},
 		{
 			module: "MMM-KeyboardPageSwitcher",
