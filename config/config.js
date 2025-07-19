@@ -151,7 +151,47 @@ let config = {
 		{
 			module: "MMM-FamilyWeatherStatus",
 			position: "top_right" // or "none"，你已經用 fixed 定位
-		}
+		},
+		{
+			module: 'MMM-Pages',
+			config: {
+				modules: [
+				// 頁面 1（主頁面）
+				[
+					"MMM-EmotionWeather",
+					"MMM-FamilyWeatherStatus",
+					"MMM-Date",
+					"MMM-CustomClock",
+					"MMM-TodayWeatherStatus",
+					"MMM-Location",
+					"MMM-SimpleTemp",
+					"MMM-BackgroundVideo" // ✅ 第一頁背景加在這
+				],
+				// 頁面 2（背景影片頁）
+				[
+					"MMM-BackgroundVideo2" // ✅ 第二頁背景加在這
+				]
+				],
+				fixed: [], // 永遠顯示的模組，這裡你已經設定為空沒問題
+				// rotationTime: 0 // 禁用自動輪播
+			}
+		},
+
+		/*{
+			module: "MMM-ProximityPageSwitcher",
+			config: {
+				endpoint: "http://localhost:3001/distance",
+				threshold: 100
+			}
+		}*/
+		{
+		module: "MMM-BackgroundVideo",
+		position: "fullscreen_above" // 第一頁背景
+		},
+		{
+		module: "MMM-BackgroundVideo2",
+		position: "fullscreen_above" // 第二頁背景
+		},
 	]
 };
 
