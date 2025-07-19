@@ -18,6 +18,9 @@ Module.register("MMM-KeyboardPageSwitcher", {
       }else if (e.key === "5") {
         this.sendNotification("PAGE_CHANGED", 4); // 切到第 5 頁
         console.log("👉 切換到第 5 頁");
+      }else if (e.key === "6") {
+        this.sendNotification("PAGE_CHANGED", 5); // 切到第 5 頁
+        console.log("👉 切換到第 6 頁");
       }
     });
   },

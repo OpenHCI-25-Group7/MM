@@ -1,4 +1,5 @@
 Module.register("MMM-FamilyWeatherStatus", {
+  //從後端
   defaults: {
     endpoint: "http://localhost:5000/family_weather", // 若之後部署到他人伺服器，改這裡
     updateInterval: 30 * 60 * 1000

@@ -14,6 +14,7 @@ Module.register("MMM-EmotionWeather", {
   },
 
   updateContent() {
+    // 從後端 API 獲取每日新聞、運勢和天氣資訊
     fetch("http://localhost:5000/display_content", {
       method: "POST",
       headers: {

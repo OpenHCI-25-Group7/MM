@@ -47,6 +47,7 @@ let config = {
 					['page2'], //陰天
 					['page3'], //小雨
 					['page4'], //雷陣雨
+					['page5'] //資訊頁面
 				]
 			}
 		},
@@ -218,8 +219,9 @@ let config = {
 
 
 		{// 新加上的頁面
-		module: "MMM-InfoPage",
-		classes: "page5", // 第一頁資訊 // 或你想要的區域
+			module: "MMM-InfoPage",
+			classes: "page5", // 第一頁資訊
+			position: "fullscreen_above" // 或你想要的區域
 		},
 		{
 			module: "MMM-BackgroundVideo",
