@@ -25,9 +25,12 @@
 }
 
 .module.page1 .date-subtitle {
-  position: fixed;
-  bottom: 130px;
-  right: 96px;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+    overflow: visible;
+    bottom: -1620px;
+    right: -20px;
 
   /* Figma Typography 對應 */
   color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
@@ -38,16 +41,19 @@
   line-height: 140%;         /* 即 44.8px */
   letter-spacing: 5px;
 }
-
+/*2*/
 .module.page2 .date-block {
   left: 200px;
   z-index: 10;      /* 確保在畫面上層 */
 }
 
 .module.page2 .date-subtitle {
-  position: fixed;
-  bottom: 130px;
-  right: 96px;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+    overflow: visible;
+    bottom: -1620px;
+    right: -20px;
 
   /* Figma Typography 對應 */
   color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
@@ -60,16 +66,18 @@
 }
 
 /*3*/
-
 .module.page3 .date-block {
   left: 200px;
   z-index: 10;      /* 確保在畫面上層 */
 }
 
 .module.page3 .date-subtitle {
-  position: fixed;
-  bottom: 130px;
-  right: 96px;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+    overflow: visible;
+    bottom: -1620px;
+    right: -20px;
 
   /* Figma Typography 對應 */
   color: var(--Text-Primary, rgba(255, 255, 255, 0.90));
@@ -80,6 +88,7 @@
   line-height: 140%;         /* 即 44.8px */
   letter-spacing: 5px;
 }
+
 /*4*/
 .module.page4 .date-block {
   left: 200px;
@@ -87,9 +96,12 @@
 }
 
 .module.page4 .date-subtitle {
-  position: fixed;
-  bottom: 130px;
-  right: 96px;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+    overflow: visible;
+    bottom: -1620px;
+    right: -20px;
 
   /* Figma Typography 對應 */
   color: var(--Text-Primary, rgba(255, 255, 255, 0.90));

@@ -86,13 +86,12 @@
   }
 }
 
-
-
 /* MMM-EmotionWeather.css 1*/
 
 .module.page1 .emotion-container {
   position: absolute;
-  bottom: -1350px;
+  bottom: -1400px;
+  left: 70px;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Noto Sans TC", sans-serif;
   padding: 20px;
@@ -168,12 +167,12 @@
   padding-left: 100%;
   animation: scroll-left 15s linear infinite;
 }
-
-/* MMM-EmotionWeather.css 2*/
+/*2*/
 
 .module.page2 .emotion-container {
   position: absolute;
-  bottom: -1350px;
+  bottom: -1400px;
+  left: 70px;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Noto Sans TC", sans-serif;
   padding: 20px;
@@ -249,11 +248,12 @@
   padding-left: 100%;
   animation: scroll-left 15s linear infinite;
 }
-/* MMM-EmotionWeather.css 3*/
+/*3*/
 
 .module.page3 .emotion-container {
   position: absolute;
-  bottom: -1350px;
+  bottom: -1400px;
+  left: 70px;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Noto Sans TC", sans-serif;
   padding: 20px;
@@ -329,11 +329,13 @@
   padding-left: 100%;
   animation: scroll-left 15s linear infinite;
 }
-/* MMM-EmotionWeather.css */
+
+/*4*/
 
 .module.page4 .emotion-container {
   position: absolute;
-  bottom: -1350px;
+  bottom: -1400px;
+  left: 70px;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Noto Sans TC", sans-serif;
   padding: 20px;

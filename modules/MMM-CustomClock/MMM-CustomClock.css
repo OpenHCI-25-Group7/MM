@@ -9,7 +9,7 @@
 }
 .module.page1 .custom-clock-wrapper {
   position: absolute;
-  bottom: 110px;   /* 調整垂直位置 */
+  bottom: 12px;   /* 調整垂直位置 */
   left: 96px;      /* 調整水平位置 */
   font-size: 56px;
   font-family: "Noto Sans TC", sans-serif;
@@ -18,8 +18,8 @@
 }
 /*2*/
 .module.page2 .custom-clock-wrapper {
-  position: fixed;
-  bottom: 110px;   /* 調整垂直位置 */
+  position: absolute;
+  bottom: 12px;   /* 調整垂直位置 */
   left: 96px;      /* 調整水平位置 */
   font-size: 56px;
   font-family: "Noto Sans TC", sans-serif;
@@ -28,8 +28,8 @@
 }
 /*3*/
 .module.page3 .custom-clock-wrapper {
-  position: fixed;
-  bottom: 110px;   /* 調整垂直位置 */
+  position: absolute;
+  bottom: 12px;   /* 調整垂直位置 */
   left: 96px;      /* 調整水平位置 */
   font-size: 56px;
   font-family: "Noto Sans TC", sans-serif;
@@ -38,8 +38,8 @@
 }
 /*4*/
 .module.page4 .custom-clock-wrapper {
-  position: fixed;
-  bottom: 110px;   /* 調整垂直位置 */
+  position: absolute;
+  bottom: 12px;   /* 調整垂直位置 */
   left: 96px;      /* 調整水平位置 */
   font-size: 56px;
   font-family: "Noto Sans TC", sans-serif;

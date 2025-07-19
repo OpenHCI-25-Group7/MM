@@ -34,13 +34,11 @@
   margin-top: 8px;
 }
 
-
-
-
 .module.page1 .family-weather-wrapper {
   position: absolute;
-  top: -60px;
-  right: 30px;
+  white-space: nowrap;
+  top: 1270px;
+  right: -30px;
   color: white;
   font-family: "Noto Sans TC", sans-serif;
   display: flex;
@@ -72,11 +70,11 @@
   margin-top: 8px;
 }
 /*2*/
-
 .module.page2 .family-weather-wrapper {
   position: absolute;
-  top: -60px;
-  right: 30px;
+  white-space: nowrap;
+  top: 1270px;
+  right: -30px;
   color: white;
   font-family: "Noto Sans TC", sans-serif;
   display: flex;
@@ -110,8 +108,9 @@
 /*3*/
 .module.page3 .family-weather-wrapper {
   position: absolute;
-  top: -60px;
-  right: 30px;
+  white-space: nowrap;
+  top: 1270px;
+  right: -30px;
   color: white;
   font-family: "Noto Sans TC", sans-serif;
   display: flex;
@@ -145,8 +144,9 @@
 /*4*/
 .module.page4 .family-weather-wrapper {
   position: absolute;
-  top: -60px;
-  right: 30px;
+  white-space: nowrap;
+  top: 1270px;
+  right: -30px;
   color: white;
   font-family: "Noto Sans TC", sans-serif;
   display: flex;

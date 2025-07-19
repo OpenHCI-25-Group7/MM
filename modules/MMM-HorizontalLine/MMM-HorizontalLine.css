@@ -17,3 +17,30 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.module.page2 .horizontal-line {
+  position: fixed;
+  width: 777.779px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.module.page3 .horizontal-line {
+  position: fixed;
+  width: 777.779px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.module.page4 .horizontal-line {
+  position: fixed;
+  width: 777.779px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
