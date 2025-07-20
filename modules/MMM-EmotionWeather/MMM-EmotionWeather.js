@@ -1,8 +1,8 @@
 Module.register("MMM-EmotionWeather", {
   defaults: {
-    suggestion: "載入中...",
-    fortune: "載入中...",
-    weather: null
+    suggestion: "",
+    fortune: "",
+    weather: null, // 這裡可以是 null 或者一個物件，根據後端回傳的格式
   },
 
   start() {
@@ -13,28 +13,31 @@ Module.register("MMM-EmotionWeather", {
     }, 60000);
   },
 
-  updateContent() {
-    // 從後端 API 獲取每日新聞、運勢和天氣資訊
-    fetch("http://172.20.10.3:5000/display_content", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ query: "getDisplayContent" })
+ updateContent() {
+  fetch("http://172.20.10.3:5000/display_content_sentence", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ query: "getDisplayContent" })
+  })
+    .then(res => res.json())
+    .then(data => {
+      this.suggestion = data.result?.suggestion || "未提供建議";
+      this.fortune = data.result?.fortune || "未提供運勢";
+
+      return fetch("http://172.20.10.3:5000/display_content");
     })
-      .then(res => res.json())
-      .then(data => {
-        if (data.result) {
-          // 內容在 suggestion 和furtune 中
-          this.config.suggestion = data.result.suggestion || "未提供建議";
-          this.config.fortune = data.result.fortune || "未提供運勢";
-          this.config.weather = data.result.weather || null;
-          this.updateDom();
-        }
-      })
-      .catch(err => {
-        console.error("❌ 錯誤：", err);
-      });
+    .then(res => res.json())
+    .then(data => {
+      this.weather = data.weather || null;
+
+      // ➤ 等資料真的更新後再更新 DOM
+      this.updateDom(500);
+    })
+    .catch(err => {
+      console.error("❌ 錯誤：", err);
+    });
   },
 
   getDom() {
@@ -45,7 +48,7 @@ Module.register("MMM-EmotionWeather", {
   const suggestion = document.createElement("div");
   suggestion.innerHTML = `
     <div class="section-title">每日新聞</div>
-    <div class="section-text"><span>${this.config.suggestion}</span></div>
+    <div class="section-text"><span>${this.suggestion}</span></div>
   `;
   wrapper.appendChild(suggestion);
 
@@ -53,13 +56,13 @@ Module.register("MMM-EmotionWeather", {
   const fortune = document.createElement("div");
   fortune.innerHTML = `
     <div class="section-title">每日運勢</div>
-    <div class="section-text"><span>家庭運勢：${this.config.fortune}</span></div>
+    <div class="section-text"><span>家庭運勢：${this.fortune}</span></div>
   `;
   wrapper.appendChild(fortune);
 
   // 天氣區塊
-  if (this.config.weather) {
-    const w = this.config.weather;
+  if (this.weather) {
+    const w = this.weather;
 
     const weather = document.createElement("div");
     weather.className = "weather-section";
