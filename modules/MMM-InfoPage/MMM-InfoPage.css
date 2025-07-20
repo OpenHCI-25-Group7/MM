@@ -144,18 +144,20 @@
 }
 
 .MMM-InfoPage ul li {
-  margin-bottom: 0.8rem;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 1.5rem;
   color: #000;
   font-family: "Noto Sans TC";
-  font-size: 26px;
+  font-size: 34px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400;   
   line-height: 140%;
 }
 
 .MMM-InfoPage .btn-flat {
+  display: none;
   width: 100%;
-  display: flex;
   font-size: 24px;
   justify-content: center;
   align-items: flex-end;
@@ -167,3 +169,5 @@
     0px 6px 20px 0px rgba(0, 0, 0, 0.15),
     0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
+
+
