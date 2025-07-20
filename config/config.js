@@ -217,12 +217,6 @@ let config = {
 			position: "top_right" // or "none"，你已經用 fixed 定位
 		},
 
-
-		{// 新加上的頁面
-			module: "MMM-InfoPage",
-			classes: "page5", // 第一頁資訊
-			position: "fullscreen_below" // 或你想要的區域
-		},
 		{
 			module: "MMM-BackgroundVideo",
 			classes: "page0", // 第一頁背景
@@ -251,7 +245,12 @@ let config = {
 		{
 			module: "MMM-KeyboardPageSwitcher",
 			position: "top_bar" // 這個模組可以放在任何位置，因為它只監聽鍵盤事件
-		}
+		},
+		{// 新加上的頁面
+			module: "MMM-InfoPage",
+			classes: "page5", // 第一頁資訊
+			position: "fullscreen_below" // 或你想要的區域
+		},
 	]
 };
 
