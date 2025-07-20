@@ -12,12 +12,12 @@ Module.register("MMM-InfoPage", {
                 <div class="calendar">
                     <h5>Jul 2025</h5>
                     <ul class="collection">
-                        <li class="collection-item">S 23 <span class="dot"></span></li>
-                        <li class="collection-item">M 24</li>
-                        <li class="collection-item">T 25</li>
-                        <li class="collection-item">W 26 <span class="dot"></span></li>
-                        <li class="collection-item">R 27 <span class="dot"></span></li>
-                        <li class="collection-item">F 27 <span class="dot"></span></li>
+                        <li class="collection-item">S 24 <span class="dot"></span></li>
+                        <li class="collection-item">M 25</li>
+                        <li class="collection-item">T 26</li>
+                        <li class="collection-item">W 27 <span class="dot"></span></li>
+                        <li class="collection-item">R 28 <span class="dot"></span></li>
+                        <li class="collection-item">F 29 <span class="dot"></span></li>
                         <li class="collection-item">S 30</li>
                         <li class="collection-item">M 31</li>
                     </ul>
