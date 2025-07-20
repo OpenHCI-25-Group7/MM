@@ -1,21 +1,16 @@
 /* 使用指定的尺寸和樣式 */
 .MMM-InfoPage {
   display: flex;
-  width: 1080px !important;
-  height: 1920px !important;
+  width: 1080px;
+  height: 1920px;
   padding: 48px 48px 0px 48px;
   align-items: flex-start;
   flex-shrink: 0;
   box-sizing: border-box;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  background: #fff !important;
-  z-index: 9999 !important;
+  position: relative;
+  background: #fff;
 }
-.MMM-InfoPage ~ * {
-  display: none !important; /* 隱藏其他內容 */
-}
+
 /* 容器佈局 */
 .MMM-InfoPage .container-box {
   position: absolute;
