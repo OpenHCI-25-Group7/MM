@@ -33,6 +33,7 @@ Module.register("MMM-KeyboardPageSwitcher", {
   crackShown: false,
   mode: 1,
   lastPage: null,
+  manualOverrideUntil: 0, // ⬅️ 加入這行：手動優先期截止時間
 
   start() {
     console.log("✅ MMM-KeyboardPageSwitcher 啟動成功");
@@ -44,6 +45,7 @@ Module.register("MMM-KeyboardPageSwitcher", {
         const pageIndex = key - 1;
         this.sendNotification("PAGE_CHANGED", pageIndex);
         console.log(`👉 手動切換到第 ${pageIndex + 1} 頁`);
+        this.manualOverrideUntil = Date.now() + 10000; // ⏱ 10 秒手動優先
       }
     });
 
