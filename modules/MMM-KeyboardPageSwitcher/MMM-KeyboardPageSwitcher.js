@@ -81,7 +81,6 @@ Module.register("MMM-KeyboardPageSwitcher", {
   handleMirrorState() {
     // 若沒人 → 回天氣影片頁
     if (!this.personNear) {
-      this.playWeatherVideo(this.weather);
       this.switchPage(0);
       return;
     }
@@ -90,7 +89,6 @@ Module.register("MMM-KeyboardPageSwitcher", {
     if ((this.weather === "小雨" || this.weather === "暴雨") && this.rainDuration > 120) {
       if (!this.crackShown) {
         this.crackShown = true;
-        this.playCrackAnimation();
         this.logEvent("crackAnimation");
       }
       this.switchPage(1); // 頁面 1：裂痕頁
@@ -100,7 +98,6 @@ Module.register("MMM-KeyboardPageSwitcher", {
     // 天氣轉晴 → 消除裂痕動畫
     if (this.crackShown && this.weather === "晴天") {
       this.crackShown = false;
-      this.fadeOutCrackAnimation();
       this.logEvent("crackFadeOut");
       this.switchPage(0); // 回到影片頁
       return;
@@ -136,25 +133,7 @@ Module.register("MMM-KeyboardPageSwitcher", {
     this.lastPage = index;
   },
 
-  // 視覺動作 & 後端紀錄（可串 UI 動畫）
-  playWeatherVideo(weather) {
-    console.log(`🌤 播放 ${weather} 影片與字幕`);
-  },
-  playCrackAnimation() {
-    console.log("💥 播放裂痕動畫");
-  },
-  fadeOutCrackAnimation() {
-    console.log("💨 裂痕動畫消失");
-  },
-  showMirrorPage() {
-    console.log("🪞 顯示鏡子互動頁面");
-  },
-  openBiasRecordPage() {
-    console.log("📘 顯示偏見事件紀錄頁面");
-  },
-  keepUnchanged() {
-    console.log("🔲 保持當前頁面不變");
-  },
+  
 
   logEvent(eventName) {
     fetch("http://172.20.10.3:5000/log", {
