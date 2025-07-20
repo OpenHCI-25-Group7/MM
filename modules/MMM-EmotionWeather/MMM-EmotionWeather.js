@@ -23,8 +23,8 @@ Module.register("MMM-EmotionWeather", {
   })
     .then(res => res.json())
     .then(data => {
-      this.suggestion = data.result?.suggestion || "未提供建議";
-      this.fortune = data.result?.fortune || "未提供運勢";
+      this.suggestion = data.result?.suggestion || "精選書摘《我不是不努力，只是做不到你滿意》：大人一句無心的話，如何把孩子推入困境？";
+      this.fortune = data.result?.fortune || "今天稱讚家人一句，氣氛 +1°C ☀️";
 
       return fetch("http://172.20.10.3:5000/display_content");
     })
