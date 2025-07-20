@@ -48,12 +48,12 @@ Module.register("MMM-KeyboardPageSwitcher", {
     });
 
     // ➤ 2. 每 2 秒自動檢查後端狀態
-    this.stateInterval = setInterval(this.fetchAndUpdateState.bind(this), 2000);
+    this.stateInterval = setInterval(this.fetchAndUpdateState.bind(this), 3000);
   },
 
   // 從後端抓狀態 + 套用邏輯
   fetchAndUpdateState() {
-    fetch("http://172.20.10.9:5000:5000/display_content")
+    fetch("http://172.20.10.3:5000:5000/display_content")
       .then((res) => res.json())
       .then((data) => {
         // 從後端取得資料更新狀態
@@ -150,8 +150,9 @@ Module.register("MMM-KeyboardPageSwitcher", {
   },
 
   logEvent(eventName) {
-    fetch("http://172.20.10.9:5000/log", {
+    fetch("http://172.20.10.3:5000/log", {
       method: "POST",
+      checkInterval: 3000,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         timestamp: new Date().toISOString(),

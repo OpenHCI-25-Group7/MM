@@ -1,6 +1,6 @@
 Module.register("MMM-ProximityPageSwitcher", {
   defaults: {
-    endpoint: "http://172.20.10.9:5000/display_content/distance",
+    endpoint: "http://172.20.10.3:5000/display_content/distance",
     checkInterval: 3000,
     threshold: 100, // 小於這距離算「靠近」
   },
