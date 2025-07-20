@@ -1,8 +1,8 @@
 /* 使用指定的尺寸和樣式 */
 .MMM-InfoPage {
   display: flex;
-  width: 898px;
-  height: 1922px;
+  width: 1080px;
+  height: 1920px;
   padding: 48px 48px 0px 48px;
   align-items: flex-start;
   flex-shrink: 0;
