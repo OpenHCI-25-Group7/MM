@@ -6,7 +6,7 @@ Module.register("MMM-BackgroundVideo4", {
     video.autoplay = true;
     video.loop = true;
     video.muted = true;
-    video.src = this.file("test.mp4");
+    video.src = this.file("bg4.mp4");
     return video;
   },
   getStyles: function () {
