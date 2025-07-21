@@ -48,7 +48,7 @@ Module.register("MMM-EmotionWeather", {
   const suggestion = document.createElement("div");
   suggestion.innerHTML = `
     <div class="section-title">每日新聞</div>
-    <div class="section-text"><span>精選書摘《我不是不努力，只是做不到你滿意》：大人一句無心的話，如何把孩子推入困境？<span></div>
+    <div class="section-text"><span>${this.suggestion}</span></div>
   `;
   wrapper.appendChild(suggestion);
 
@@ -56,7 +56,7 @@ Module.register("MMM-EmotionWeather", {
   const fortune = document.createElement("div");
   fortune.innerHTML = `
     <div class="section-title">每日運勢</div>
-    <div class="section-text"><span>家庭運勢：今天稱讚家人一句，氣氛 +1°C ☀️</span></div>
+    <div class="section-text"><span>家庭運勢：${this.fortune}</span></div>
   `;
   wrapper.appendChild(fortune);
 
