@@ -156,4 +156,4 @@ Module.register("MMM-KeyboardPageSwitcher", {
   resume() {
     this.start();
   }
-});
+});6
